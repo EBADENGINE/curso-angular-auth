@@ -27,6 +27,7 @@
         This field should be a email
       </p>
     </div>
+ 
   </div>
   <div>
     <div class="relative">
@@ -39,6 +40,15 @@
       <button type="button" class="p-2 absolute right-2" (click)="showPassword = !showPassword">
         <fa-icon [icon]="showPassword ? faEye : faEyeSlash"></fa-icon>
       </button>
+    </div>
+    <div *ngIf= "status ==='failed'">
+      <p
+      class="font-medium text-red-500 text-xs mt-1 ml-1"
+      >
+      Credenciales incorrectas.
+  
+      </p>
+  
     </div>
     <div *ngIf="form.controls.password.touched && form.controls.password.invalid">
       <p
